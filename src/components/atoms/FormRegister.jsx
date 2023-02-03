@@ -34,6 +34,8 @@ function FormRegister() {
         fetch(endpoint, options)
             .then(response => response.json())
             .then(data => {
+                if(data.status === true)
+                navigate('/')
                 alert(JSON.stringify(data))
             })
     }

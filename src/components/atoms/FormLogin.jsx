@@ -33,11 +33,13 @@ function FormLogin() {
     fetch(endpoint, options)
       .then(response => response.json())
       .then(data => {
-        if (data.status === true)
-        alert("Bienvenido Programador Senior")
+        if (data.status === true) {
+          alert("Bienvenido Programador Senior")
+          navigate('/registerbus')
+        }
         else
-        alert("¿De quién eres?")
-        alert(JSON.stringify(data))
+          alert("¿De quién eres?")
+          alert(JSON.stringify(data))
       })
   }
 
